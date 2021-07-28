@@ -3,21 +3,35 @@ import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
+  const activeStyles = {
+    textDecoration: "none",
+    color: "orange",
+  };
+  const linkStyles = { textDecoration: "none", color: "white" };
+
   return (
     <navbar>
       <div className="logo">
-        <Link to="/">Superstore</Link>
+        <Link style={linkStyles} to="/">
+          Superstore
+        </Link>
       </div>
-      <div className="route">
+      <div className="routes">
         <ul>
           <li>
-            <NavLink to="/">Home</NavLink>
+            <NavLink exact style={linkStyles} activeStyle={activeStyles} to="/">
+              Home
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/deals">Deals</NavLink>
+            <NavLink style={linkStyles} activeStyle={activeStyles} to="/deals">
+              Deals
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/cart">Cart</NavLink>
+            <NavLink style={linkStyles} activeStyle={activeStyles} to="/cart">
+              Cart
+            </NavLink>
           </li>
         </ul>
       </div>

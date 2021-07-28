@@ -1,5 +1,7 @@
+import Products from "./Products/Products";
+
 function Home() {
-  return <h2>This is the homepage!</h2>;
+  return <Products />;
 }
 
 export default Home;

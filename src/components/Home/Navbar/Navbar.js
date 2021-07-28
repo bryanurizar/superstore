@@ -10,7 +10,7 @@ function Navbar() {
   const linkStyles = { textDecoration: "none", color: "white" };
 
   return (
-    <navbar>
+    <nav>
       <div className="logo">
         <Link style={linkStyles} to="/">
           Superstore
@@ -35,7 +35,7 @@ function Navbar() {
           </li>
         </ul>
       </div>
-    </navbar>
+    </nav>
   );
 }
 

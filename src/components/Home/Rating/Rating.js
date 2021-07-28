@@ -1,7 +1,7 @@
 function Rating() {
   return (
     <div>
-      <h6>4.5</h6>
+      <p>4.5</p>
     </div>
   );
 }

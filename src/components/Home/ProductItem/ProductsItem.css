@@ -1,0 +1,31 @@
+.product-item {
+  flex: 1;
+  min-width: 230px;
+  height: 350px;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: #969796;
+  margin: 15px;
+}
+
+.product-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  background-color: #f38601;
+  border-style: none;
+  padding: 7px 20px;
+  font-size: 0.7em;
+  color: white;
+  font-weight: bold;
+  border-radius: 2px;
+}

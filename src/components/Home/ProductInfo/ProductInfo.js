@@ -1,18 +1,19 @@
 // import PropTypes from "prop-types";
 
 import Rating from "../Rating/Rating";
+import "./ProductInfo.css";
 
 function ProductInfo(props) {
   return (
-    <div>
-      <h3>Basketball</h3>
-      <div>
+    <div className="product-info">
+      <h3 className="product-name">Basketball</h3>
+      <div className="product-rating-stock">
         <Rating />
-        <h6>43</h6>
+        <p>43</p>
       </div>
-      <div>
-        <h6>6.99</h6>
-        <h6>On Sale</h6>
+      <div className="product-price-sale">
+        <p>6.99</p>
+        <p>On Sale</p>
       </div>
     </div>
   );

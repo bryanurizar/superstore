@@ -1,11 +1,17 @@
 import ProductInfo from "../ProductInfo/ProductInfo";
 
+import "./ProductsItem.css";
+
 function ProductItem() {
   return (
-    <div>
-      <img alt="product-img"></img>
+    <div className="product-item">
+      <div className="product-img">
+        <img alt="product-img"></img>
+      </div>
       <ProductInfo />
-      <button></button>
+      <div className="button">
+        <button>View Item</button>
+      </div>
     </div>
   );
 }

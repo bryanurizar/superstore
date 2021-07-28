@@ -13,10 +13,11 @@ navbar {
 .logo {
   flex: 5;
   font-size: 1.5em;
-  font-weight: 600;
+  font-weight: 500;
   color: white;
   text-decoration: none;
-  margin: 0 20px;
+  letter-spacing: 3px;
+  margin: 0 30px;
 }
 
 .routes {
@@ -30,7 +31,7 @@ ul {
 li {
   display: 1;
   flex-direction: column;
-  margin: 0 20px;
+  margin: 0 30px;
   font-size: 1rem;
   font-weight: 500;
   text-decoration: none;

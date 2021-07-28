@@ -4,8 +4,8 @@ import "./Navbar.css";
 
 function Navbar() {
   const activeStyles = {
-    textDecoration: "none",
     color: "#F38601",
+    textShadow: "0 0 12px #ff0000",
   };
   const linkStyles = { textDecoration: "none", color: "white" };
 

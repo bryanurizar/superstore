@@ -1,6 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
 
-// test of gitpod
 import "./Navbar.css";
 
 function Navbar() {

@@ -6,14 +6,14 @@ import "./ProductInfo.css";
 function ProductInfo(props) {
   return (
     <div className="product-info">
-      <h3 className="product-name">Basketball</h3>
+      <h3 className="product-name">{props.name}</h3>
       <div className="product-rating-stock">
         <Rating />
-        <p>43</p>
+        <p>{props.avgRating}</p>
       </div>
       <div className="product-price-sale">
-        <p>6.99</p>
-        <p>On Sale</p>
+        <p>{props.price}</p>
+        <p>{props.isOnSale}</p>
       </div>
     </div>
   );

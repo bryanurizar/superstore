@@ -2,13 +2,22 @@ import ProductInfo from "../ProductInfo/ProductInfo";
 
 import "./ProductsItem.css";
 
-function ProductItem() {
+function ProductItem(props) {
+
+
   return (
     <div className="product-item">
       <div className="product-img">
-        <img alt="product-img"></img>
+        <img src={props.imageUrl} alt="product-img" ></img>
       </div>
-      <ProductInfo />
+      <ProductInfo
+        avgRating={props.avgRating}
+        description={props.description}
+        isOnSale={props.isOnSale}
+        name={props.name}
+        price={props.price}
+        stockCount={props.stockCount}
+      />
       <div className="button">
         <button>View Item</button>
       </div>

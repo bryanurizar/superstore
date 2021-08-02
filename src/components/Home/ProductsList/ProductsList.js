@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import PropTypes from "prop-types";
 
 import ProductItem from "../ProductItem/ProductItem";
 import "./ProductsList.css";
@@ -32,7 +31,7 @@ function ProductsList() {
               description={product.description}
               imageUrl={product.imageUrl}
               isOnSale={product.isOnSale}
-              name={5}
+              name={product.name}
               price={product.price}
               stockCount={product.stockCount}
               key={product._id}
@@ -43,16 +42,5 @@ function ProductsList() {
     </section>
   );
 }
-
-ProductsList.propTypes = {
-  avgRating: PropTypes.number,
-  description: PropTypes.string,
-  imageUrl: PropTypes.string,
-  isOnSale: PropTypes.bool,
-  name: PropTypes.string,
-  price: PropTypes.number,
-  stockCount: PropTypes.number,
-  key: PropTypes.string,
-};
 
 export default ProductsList;

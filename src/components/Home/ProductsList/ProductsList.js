@@ -1,23 +1,26 @@
 import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
 import ProductItem from "../ProductItem/ProductItem";
 import "./ProductsList.css";
 
-async function getProductData(url) {
-  const response = await fetch(url);
-  return response.json();
+async function getProductsData(url) {
+  try {
+    const response = await fetch(url);
+    return response.json();
+  } catch (err) {
+    throw err;
+  }
 }
 
 function ProductsList() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    getProductData("https://gp-super-store-api.herokuapp.com/item/list")
+    getProductsData("https://gp-super-store-api.herokuapp.com/item/list")
       .then((data) => setProducts(data.items))
       .catch(console.err);
   }, []);
-
-  console.log(products);
 
   return (
     <section className="products-section">
@@ -29,7 +32,7 @@ function ProductsList() {
               description={product.description}
               imageUrl={product.imageUrl}
               isOnSale={product.isOnSale}
-              name={product.name}
+              name={5}
               price={product.price}
               stockCount={product.stockCount}
               key={product._id}
@@ -40,5 +43,16 @@ function ProductsList() {
     </section>
   );
 }
+
+ProductsList.propTypes = {
+  avgRating: PropTypes.number,
+  description: PropTypes.string,
+  imageUrl: PropTypes.string,
+  isOnSale: PropTypes.bool,
+  name: PropTypes.string,
+  price: PropTypes.number,
+  stockCount: PropTypes.number,
+  key: PropTypes.string,
+};
 
 export default ProductsList;

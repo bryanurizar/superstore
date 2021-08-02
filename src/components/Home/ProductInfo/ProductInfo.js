@@ -7,8 +7,8 @@ function ProductInfo(props) {
   return (
     <div className="product-info">
       <h3 className="product-name">{props.name}</h3>
-      <div className="product-rating-stock">
-        <Rating />
+      <div className="product-rating">
+        <Rating avgRating={props.avgRating} />
         <p>{props.avgRating}</p>
       </div>
       <div className="product-price-sale">

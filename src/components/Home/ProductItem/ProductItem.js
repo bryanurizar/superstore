@@ -6,8 +6,12 @@ import "./ProductsItem.css";
 function ProductItem(props) {
   return (
     <div className="product-item">
-      <div className="product-img">
-        <img src={props.imageUrl} alt="product-img"></img>
+      <div className="product-img-container">
+        <img
+          className="product-img"
+          src={props.imageUrl}
+          alt="product-img"
+        ></img>
       </div>
       <ProductInfo
         avgRating={props.avgRating}

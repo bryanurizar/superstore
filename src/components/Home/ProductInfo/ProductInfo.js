@@ -6,14 +6,16 @@ import "./ProductInfo.css";
 function ProductInfo(props) {
   return (
     <div className="product-info">
-      <h3 className="product-name">{props.name}</h3>
+      <p className="product-name">{props.name}</p>
       <div className="product-rating">
         <Rating avgRating={props.avgRating} />
-        <p>{props.avgRating}</p>
+        <p className="stock-count">{props.stockCount}</p>
       </div>
       <div className="product-price-sale">
-        <p>{props.price}</p>
-        <p>{props.isOnSale}</p>
+        <p className="product-price">£{props.price}</p>
+        <p className={props.isOnSale ? "on-sale" : null}>
+          {props.isOnSale === true ? "On Sale" : null}
+        </p>
       </div>
     </div>
   );

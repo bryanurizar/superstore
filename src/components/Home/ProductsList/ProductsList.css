@@ -10,5 +10,6 @@
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  width: 66%;
+  width: 80%;
+  padding: 60px;
 }

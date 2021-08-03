@@ -1,12 +1,13 @@
 .product-item {
   flex: 1;
-  min-width: 250px;
-  max-width: 250px;
-  height: 350px;
+  min-width: 210px;
+  max-width: 210px;
+  height: 290px;
   border-style: solid;
   border-width: 1.5px;
-  border-color: #969796;
+  border-color: hsl(120, 0%, 59%);
   margin: 15px;
+  padding: 30px;
 }
 
 .product-img-container {
@@ -24,14 +25,22 @@
 button {
   background-color: #f38601;
   border-style: none;
-  padding: 7px 20px;
+  padding: 7px 22px;
   font-size: 0.7em;
   color: white;
   font-weight: bold;
   border-radius: 2px;
+  margin: 20px 0;
 }
 
 .product-img {
-  width: 150px;
-  height: auto;
+  height: 160px;
+  width: auto;
+  margin: 0 0 10px 0;
+}
+
+.product-price {
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  font-weight: bold;
 }

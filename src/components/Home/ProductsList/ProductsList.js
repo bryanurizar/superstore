@@ -3,17 +3,17 @@ import { useState, useEffect } from "react";
 import ProductItem from "../ProductItem/ProductItem";
 import "./ProductsList.css";
 
-async function getProductsData(url) {
-  try {
-    const response = await fetch(url);
-    return response.json();
-  } catch (err) {
-    throw err;
-  }
-}
-
 function ProductsList() {
   const [products, setProducts] = useState([]);
+
+  async function getProductsData(url) {
+    try {
+      const response = await fetch(url);
+      return response.json();
+    } catch (err) {
+      throw err;
+    }
+  }
 
   useEffect(() => {
     getProductsData("https://gp-super-store-api.herokuapp.com/item/list")

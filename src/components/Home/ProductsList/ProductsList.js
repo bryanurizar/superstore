@@ -1,25 +1,8 @@
-import { useState, useEffect } from "react";
-
 import ProductItem from "../ProductItem/ProductItem";
 import "./ProductsList.css";
 
-function ProductsList() {
-  const [products, setProducts] = useState([]);
-
-  async function getProductsData(url) {
-    try {
-      const response = await fetch(url);
-      return response.json();
-    } catch (err) {
-      throw err;
-    }
-  }
-
-  useEffect(() => {
-    getProductsData("https://gp-super-store-api.herokuapp.com/item/list")
-      .then((data) => setProducts(data.items))
-      .catch(console.err);
-  }, []);
+function ProductsList(props) {
+  const { products } = props;
 
   return (
     <section className="products-section">

@@ -35,6 +35,7 @@ function Main() {
       <Route path="/cart">
         <Cart />
       </Route>
+      <Route path="/items/:itemId"></Route>
     </Switch>
   );
 }

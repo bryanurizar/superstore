@@ -4,6 +4,11 @@ import PropTypes from "prop-types";
 import "./ProductsItem.css";
 
 function ProductItem(props) {
+  function handleButtonClick(e) {
+    e.preventDefault();
+    console.log("button clicked");
+  }
+
   return (
     <div className="product-item">
       <div className="product-img-container">
@@ -22,7 +27,7 @@ function ProductItem(props) {
         stockCount={props.stockCount}
       />
       <div className="button">
-        <button>View Item</button>
+        <button onClick={handleButtonClick}>View Item</button>
       </div>
     </div>
   );

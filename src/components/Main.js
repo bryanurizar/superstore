@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Home from "./Home/Home";
 import Cart from "./Cart/Cart";
 import Deals from "./Deals/Deals";
+import Item from "./Item/Item";
 
 import "./Main.css";
 
@@ -35,7 +36,9 @@ function Main() {
       <Route path="/cart">
         <Cart />
       </Route>
-      <Route path="/items/:itemId"></Route>
+      <Route path="/item">
+        <Item />
+      </Route>
     </Switch>
   );
 }

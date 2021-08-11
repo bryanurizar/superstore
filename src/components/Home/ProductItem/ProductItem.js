@@ -27,6 +27,7 @@ function ProductItem(props) {
         stockCount={props.stockCount}
       />
       <div className="button">
+        <Link to="/item/:itemId"></Link>
         <button onClick={handleButtonClick}>View Item</button>
       </div>
     </div>

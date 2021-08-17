@@ -1,5 +1,6 @@
 import ProductInfo from "../ProductInfo/ProductInfo";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 import "./ProductsItem.css";
 

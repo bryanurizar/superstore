@@ -17,6 +17,7 @@ function ProductsList(props) {
               name={product.name}
               price={product.price}
               stockCount={product.stockCount}
+              productId={product._id}
               key={product._id}
             />
           );

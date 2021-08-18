@@ -1,13 +1,14 @@
 import ProductInfo from "../ProductInfo/ProductInfo";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import "./ProductsItem.css";
 
 function ProductItem(props) {
+  let history = useHistory();
+
   function handleButtonClick(e) {
-    e.preventDefault();
-    console.log("button clicked");
+    history.push(`/items/${props.productId}`);
   }
 
   return (
@@ -28,7 +29,6 @@ function ProductItem(props) {
         stockCount={props.stockCount}
       />
       <div className="button">
-        <Link to="/item/:itemId"></Link>
         <button onClick={handleButtonClick}>View Item</button>
       </div>
     </div>
@@ -43,6 +43,7 @@ ProductItem.propTypes = {
   name: PropTypes.string,
   price: PropTypes.number,
   stockCount: PropTypes.number,
+  productId: PropTypes.string,
 };
 
 export default ProductItem;

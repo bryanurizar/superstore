@@ -1,5 +1,3 @@
-import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
+function Items() {}
 
-function Items() {
-  let match = useRouteMatch();
-}
+export default Items;

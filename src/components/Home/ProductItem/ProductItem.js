@@ -8,7 +8,7 @@ function ProductItem(props) {
   let history = useHistory();
 
   function handleButtonClick(e) {
-    history.push(`/items/${props.productId}`);
+    history.push(`/item/${props.productId}`);
   }
 
   return (

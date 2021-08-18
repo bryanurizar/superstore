@@ -3,8 +3,7 @@ import { useEffect, useState } from "react";
 import Home from "./Home/Home";
 import Cart from "./Cart/Cart";
 import Deals from "./Deals/Deals";
-import Items from "./Items/Items";
-import Item from "./Items/Item/Item";
+import Item from "./Item/Item";
 
 import "./Main.css";
 
@@ -37,10 +36,7 @@ function Main() {
       <Route path="/cart">
         <Cart />
       </Route>
-      <Route exact path="/items">
-        <Items />
-      </Route>
-      <Route exact path="items/:itemId">
+      <Route exact path="/item/:itemId">
         <Item />
       </Route>
     </Switch>

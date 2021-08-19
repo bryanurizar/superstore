@@ -21,7 +21,10 @@ function Main() {
 
   useEffect(() => {
     getProductsData("https://gp-super-store-api.herokuapp.com/item/list")
-      .then((data) => setProducts(data.items))
+      .then((data) => {
+        setProducts(data.items);
+        console.log(data.items);
+      })
       .catch((err) => console.log(err));
   }, []);
 
@@ -37,7 +40,7 @@ function Main() {
         <Cart />
       </Route>
       <Route exact path="/item/:itemId">
-        <Item />
+        <Item products={products} />
       </Route>
     </Switch>
   );

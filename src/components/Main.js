@@ -40,7 +40,7 @@ function Main() {
         <Cart />
       </Route>
       <Route exact path="/item/:itemId">
-        <Item products={products} />
+        <Item />
       </Route>
     </Switch>
   );

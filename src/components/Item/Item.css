@@ -10,3 +10,13 @@ section {
   align-content: center;
   height: 100%;
 }
+
+.img-section {
+  display: 1;
+  width: 400px;
+}
+
+.product-info {
+  display: 1;
+  width: 400px;
+}

@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Rating from "../Home/Rating/Rating";
 
@@ -5,9 +6,22 @@ import "./Item.css";
 
 function Item(props) {
   let { itemId } = useParams();
+  const [product, setProduct] = useState([]);
 
-  const [product] = props.products.filter((product) => product._id === itemId);
-  console.log(product);
+  async function getItem(url) {
+    try {
+      const response = await fetch(url);
+      return response.json();
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  useEffect((product) => {
+    getItem(`https://gp-super-store-api.herokuapp.com/item/${itemId}`)
+      .then((product) => setProduct(product))
+      .catch((err) => console.log(err));
+  });
 
   return (
     <section>

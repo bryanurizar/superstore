@@ -4,7 +4,7 @@ import Rating from "../Home/Rating/Rating";
 
 import "./Item.css";
 
-function Item(props) {
+function Item() {
   let { itemId } = useParams();
   const [product, setProduct] = useState([]);
 

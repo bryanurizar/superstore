@@ -23,7 +23,6 @@ function Main() {
     getProductsData("https://gp-super-store-api.herokuapp.com/item/list")
       .then((data) => {
         setProducts(data.items);
-        console.log(data.items);
       })
       .catch((err) => console.log(err));
   }, []);

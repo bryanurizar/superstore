@@ -17,36 +17,43 @@ function Item() {
     }
   }
 
-  useEffect((product) => {
+  useEffect(() => {
     getItem(`https://gp-super-store-api.herokuapp.com/item/${itemId}`)
       .then((product) => setProduct(product))
       .catch((err) => console.log(err));
-  });
+  }, [itemId]);
+
+  // const noImageUrl =
+  //   "https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg";
 
   return (
     <section>
-      <div class="img-section">
-        <img className="img" src={product.imageUrl} alt="product-img"></img>
-      </div>
-      <div class="product-info">
-        <h1>{product.name}</h1>
-        <div className="product-rating">
-          <Rating avgRating={product.avgRating} />
-          <p className="stock-count">{product.stockCount}</p>
+      <div className="item-container">
+        <div class="img-section">
+          <img className="img" src={product.imageUrl} alt="product-img"></img>
         </div>
-        <p>{product.description}</p>
-        <p className="product-price">£{product.price}</p>
-        <div>
-          <label for="quantity">Quantity:</label>
-          <input
-            type="number"
-            id="quantity"
-            name="quantity"
-            min="0"
-            max={product.stockCount}
-          ></input>
+        <div class="product-info item-pg">
+          <h1>{product.name}</h1>
+          <div className="product-rating">
+            <Rating avgRating={product.avgRating} />
+            <p className="stock-count">{product.stockCount}</p>
+          </div>
+          <p>{product.description}</p>
+          <p className="product-price">
+            £{product.price && product.price.toFixed(2)}
+          </p>
+          <div>
+            <label for="quantity">Quantity:</label>
+            <input
+              type="number"
+              id="quantity"
+              name="quantity"
+              min="0"
+              max={product.stockCount}
+            ></input>
+          </div>
+          <button className="add-cart">Add to Cart</button>
         </div>
-        <button>Add to Cart</button>
       </div>
     </section>
   );

@@ -11,6 +11,9 @@ function ProductItem(props) {
     history.push(`/item/${props.productId}`);
   }
 
+  // const noImageUrl =
+  //   "https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg";
+
   return (
     <div className="product-item">
       <div className="product-img-container">
@@ -25,7 +28,7 @@ function ProductItem(props) {
         description={props.description}
         isOnSale={props.isOnSale}
         name={props.name}
-        price={props.price}
+        price={props.price.toFixed(2)}
         stockCount={props.stockCount}
       />
       <div className="button">
